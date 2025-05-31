@@ -1,0 +1,129 @@
+.footer {
+  margin-top: 100px;
+
+  &_container {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &_top_line {
+    border-top: 2px solid #f1f1f1;
+  }
+
+  &_columns {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    &_layout {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 40px;
+
+      &_title {
+        font-family: var(--font-golos);
+        font-weight: 500;
+        font-size: 18px;
+        color: var(--text-color);
+      }
+
+      &_list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+
+        &_link,
+        a {
+          font-family: var(--font-golos);
+          font-weight: 400;
+          font-size: 16px;
+          color: var(--text-color);
+        }
+      }
+    }
+
+    &_icon_layout {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      gap: 40px;
+
+      &_item {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+
+        &_title {
+          font-family: var(--font-golos);
+          font-weight: 500;
+          font-size: 18px;
+          color: var(--text-color);
+        }
+
+        &_list {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 40px;
+
+          &_link,
+          img {
+            cursor: pointer;
+          }
+        }
+
+        &_language {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+
+          &_title {
+            font-family: var(--font-golos);
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--text-color);
+          }
+
+          &_button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+
+            button {
+              width: 147px;
+              height: 44px;
+              padding: 10px 40px;
+              border: none;
+              border-radius: 15px;
+              background: #d9d9d9;
+
+              span {
+                font-family: var(--font-golos);
+                font-weight: 500;
+                font-size: 16px;
+                color: #fff;
+              }
+            }
+
+            svg {
+              cursor: pointer;
+              color: var(--text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_bottom_line {
+    margin: 50px 0;
+    border-top: 2px solid #f1f1f1;
+  }
+}

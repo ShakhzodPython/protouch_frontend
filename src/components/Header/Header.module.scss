@@ -1,0 +1,128 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  padding: 20px 0;
+  z-index: 10;
+  background: #fff;
+  transition: box-shadow 0.3s ease-in-out;
+
+  &_shadow {
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  &_container {
+    max-width: 1520px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px 0 10px 0;
+
+    @media (max-width: 1440px) {
+      max-width: 1320px;
+    }
+  }
+
+  &_nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &_backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 10;
+      backdrop-filter: blur(1.2rem);
+      background: rgba(194, 194, 194, 0.2);
+    }
+
+    &_list {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 43px;
+      left: 50%;
+      transform: translate(-50%);
+
+      &_link {
+        position: relative;
+        transition: top 0.3s ease-in-out;
+
+        a {
+          font-family: var(--font-golos);
+          font-weight: 500;
+          font-size: 16px;
+          color: var(--text-color);
+        }
+
+        &_active {
+          top: 0;
+
+          &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 25px;
+            width: 50%;
+            border-radius: 20px;
+            border-bottom: 4px solid var(--primary-color);
+            transform: translateX(-50%);
+          }
+        }
+      }
+    }
+
+    &_icons_list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      &_link {
+        &_shopping_bag {
+          position: relative;
+          display: inline-block;
+
+          &_quantity {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: -7px;
+            left: 15px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+
+            span {
+              font-family: var(--font-golos);
+              font-weight: 500;
+              font-size: 12px;
+              color: #fff;
+            }
+          }
+        }
+
+        svg {
+          cursor: pointer;
+        }
+
+        &_heart_icon {
+          color: #ff5f5f;
+          transition: fill 0.3s ease-in-out;
+
+          &_active {
+            fill: #ff5f5f;
+          }
+        }
+      }
+    }
+  }
+}

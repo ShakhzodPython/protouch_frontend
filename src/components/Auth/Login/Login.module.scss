@@ -1,0 +1,110 @@
+.login {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_title {
+      font-family: var(--font-golos);
+      font-weight: 500;
+      font-size: 22px;
+      color: var(--text-color);
+    }
+
+    &_inputs {
+      margin-top: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+    }
+
+    &_credentials {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      &_text {
+        font-family: var(--font-golos);
+        font-weight: 400;
+        font-size: 14px;
+        color: var(--text-color);
+
+        a {
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    &_buttons {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+      span {
+        font-family: var(--font-golos);
+        font-weight: 400;
+        font-size: 14px;
+        text-align: center;
+        color: var(--text-color);
+      }
+
+      &_login {
+        cursor: pointer;
+        width: 400px;
+        height: 50px;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        background: var(--primary-color);
+
+        span {
+          font-family: var(--font-golos);
+          font-weight: 500;
+          font-size: 16px;
+          text-align: center;
+          color: #fff;
+        }
+      }
+      &_google {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 400px;
+        height: 50px;
+        padding: 10px;
+        border: none;
+        border-radius: 20px;
+        background: #eef6ff;
+
+        span {
+          font-family: var(--font-golos);
+          font-weight: 500;
+          font-size: 16px;
+          color: var(--primary-color);
+        }
+
+        &_error {
+          font-family: var(--font-golos);
+          font-weight: 400;
+          font-size: 15px;
+          color: #ff5f5f;
+        }
+      }
+    }
+  }
+}

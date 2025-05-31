@@ -1,0 +1,54 @@
+.register_form_inputs_layout {
+  position: relative;
+
+  &_label {
+    position: absolute;
+    font-family: var(--font-golos);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 18px 20px;
+    color: #aaa;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    transform: translateY(-50%);
+
+    &_active {
+      top: -7px;
+      font-family: var(--font-golos);
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+
+  &_input {
+    font-family: var(--font-golos);
+    font-size: 16px;
+    font-weight: 400;
+    width: 400px;
+    height: 55px;
+    padding: 18px 20px;
+    border-radius: 20px;
+    border: 1.5px solid #ededed;
+    transition: border 0.3s ease;
+
+    &_error_field {
+      border: 2px solid #ff5f5f;
+
+    }
+
+    &:focus {
+      font-family: var(--font-golos);
+      font-size: 16px;
+      font-weight: 400;
+      outline: transparent;
+      transition: border-color 0.3s ease;
+    }
+
+    &_error {
+      font-family: var(--font-golos);
+      font-weight: 400;
+      font-size: 15px;
+      color: #ff5f5f;
+    }
+  }
+}

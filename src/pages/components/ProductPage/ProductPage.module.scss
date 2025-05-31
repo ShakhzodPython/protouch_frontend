@@ -1,0 +1,157 @@
+.page {
+  margin-top: 50px;
+
+  &_container {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 1440px) {
+      max-width: 1320px;
+    }
+  }
+
+  &_content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 50px;
+
+    &_layout {
+      max-width: 335px;
+      width: 100%;
+    }
+
+    &_filters {
+      margin-top: 20px;
+
+      &_button {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        background: transparent;
+        width: 335px;
+
+        &_title {
+          font-family: var(--font-golos);
+          font-weight: 500;
+          font-size: 20px;
+          color: var(--text-color);
+        }
+
+        svg {
+          cursor: pointer;
+          color: var(--text-color);
+        }
+      }
+    }
+
+    &_sidebar {
+      margin-top: 40px;
+      &_aside {
+        &_heading {
+          &_title {
+            font-family: var(--font-golos);
+            font-weight: 500;
+            font-size: 18px;
+            color: rgba(184, 184, 184, 0.7);
+          }
+        }
+
+        &_list {
+          margin-top: 40px;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          &_link {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+
+            &_checkbox {
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 24px;
+              height: 24px;
+              border-radius: 100%;
+              border: 2px solid var(--primary-color);
+              transition: 0.2s ease;
+
+              &_checked {
+                background-color: var(--primary-color);
+                border-color: var(--primary-color);
+                color: #ffff;
+              }
+            }
+
+            span {
+              font-family: var(--font-golos);
+              font-weight: 500;
+              font-size: 16px;
+              color: var(--text-color);
+            }
+          }
+        }
+
+        &_children_list {
+          margin-top: 20px;
+          display: flex;
+          align-items: stretch;
+          flex-direction: column;
+          gap: 5px;
+          padding-left: 20px;
+
+          &_link {
+            cursor: pointer;
+            display: flex;
+            justify-content: start;
+            align-items: stretch;
+            margin-top: 6px;
+            gap: 15px;
+
+            span {
+              font-family: var(--font-golos);
+              font-weight: 500;
+              font-size: 16px;
+              color: var(--text-color);
+            }
+          }
+        }
+
+        &_brand_list {
+          margin-top: 10px;
+          display: flex;
+          align-items: stretch;
+          flex-direction: column;
+
+          &_link {
+            cursor: pointer;
+            display: flex;
+            justify-content: start;
+            align-items: stretch;
+            margin-top: 6px;
+            gap: 15px;
+
+            span {
+              font-family: var(--font-golos);
+              font-weight: 500;
+              font-size: 16px;
+              color: var(--text-color);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &_products_container {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}

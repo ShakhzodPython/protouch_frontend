@@ -1,0 +1,61 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_button {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    &_ellipsis {
+      color: #999;
+      padding: 8px 12px;
+    }
+  }
+
+  &_button_number {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid var(--text-color);
+    background: transparent;
+
+    span {
+      font-family: var(--font-golos);
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--text-color);
+    }
+
+    &_active {
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 10px;
+      background: var(--primary-color);
+
+      span {
+        font-family: var(--font-golos);
+        font-weight: 500;
+        font-size: 18px;
+        color: #fff;
+      }
+    }
+  }
+}

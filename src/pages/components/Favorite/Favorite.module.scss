@@ -1,0 +1,131 @@
+.favorites {
+  margin-top: 50px;
+
+  &_container {
+    max-width: 1520px;
+    width: 100%;
+    margin: 0 auto;
+  
+    @media (max-width: 1440px) {
+      max-width: 1320px;
+    }
+  }
+
+  &_no_content {
+    margin-top: 20px;
+
+    &_title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 22px;
+      color: var(--text-color);
+    }
+
+    &_description {
+      margin-top: 30px;
+      font-family: var(--font-inter);
+      font-weight: 400;
+      font-size: 16px;
+      color: var(--text-color);
+
+      a {
+        color: var(--primary-color);
+      }
+    }
+
+    &_button {
+      cursor: pointer;
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      align-items: center;
+      max-width: 200px;
+      height: 39px;
+      padding: 10px;
+      border-radius: 15px;
+      border: 1px solid #ff5f5f;
+      background: transparent;
+
+      span {
+        font-family: var(--font-inter);
+        font-weight: 400;
+        font-size: 14px;
+        color: #ff5f5f;
+      }
+
+      svg {
+        color: #ff5f5f;
+      }
+    }
+  }
+  &_box {
+    margin-top: 20px;
+
+    &_title {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 22px;
+      color: var(--text-color);
+    }
+  }
+
+  &_cards {
+    display: grid;
+    grid-template-columns: repeat(4, 4fr);
+
+    &_card {
+      width: 310px;
+      height: 385px;
+
+      &_image {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 310px;
+        height: 237px;
+        padding: 30px;
+        border-radius: 20px;
+        background: #f6faff;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+
+      &_details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &_side {
+          margin-top: 20px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &_title {
+            font-family: var(--font-inter);
+            font-weight: 500;
+            font-size: 18px;
+            color: var(--text-color);
+          }
+          svg {
+            cursor: pointer;
+            color: #ff5f5f;
+          }
+        }
+
+        &_price {
+          font-family: var(--font-inter);
+          font-weight: 500;
+          font-size: 18px;
+          color: var(--text-color);
+        }
+      }
+    }
+  }
+}

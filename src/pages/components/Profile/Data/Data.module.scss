@@ -1,0 +1,64 @@
+.data {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &_layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    &_label {
+      font-family: var(--font-inter);
+      font-weight: 500;
+      font-size: 22px;
+      color: var(--text-color);
+    }
+
+    input {
+      width: 300px;
+      height: 49px;
+      border-radius: 20px;
+      border: 1.5px solid #ededed;
+      padding: 15px 20px;
+      font-family: var(--font-inter);
+      font-size: 16px;
+      transition: border 0.3s ease;
+
+      &::placeholder {
+        font-family: var(--font-inter);
+        font-size: 16px;
+        color: #bbb;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1.5px solid var(--primary-color);
+      }
+    }
+  }
+
+  .disabledInput {
+    background-color: #f9f9f9;
+    color: #666;
+    cursor: default;
+  }
+
+  .customEditButton {
+    width: 180px;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(to right, #5f2c82, #49a09d);
+    color: white;
+    font-size: 16px;
+    font-family: var(--font-inter);
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.9;
+      transform: scale(1.03);
+    }
+  }
+}

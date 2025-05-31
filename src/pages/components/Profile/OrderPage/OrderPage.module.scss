@@ -1,0 +1,42 @@
+.order_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+
+  .header,
+  .row {
+    display: flex;
+    justify-content: space-between;
+    width: 1135px;
+    padding: 15px 20px;
+    gap: 40px;
+    border-bottom: 1px solid #e0e0e0;
+
+    div {
+      width: 25%;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .header {
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--text-color);
+    background: #fbfbfb;
+  }
+
+  .product {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 32px;
+      height: 60px;
+      object-fit: contain;
+    }
+  }
+}

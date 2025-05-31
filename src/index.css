@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+:root {
+  --font-golos: 'Golos Text', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  --text-color: rgb(48, 47, 47);
+  --primary-color: #249ffc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  margin-top: 100px;
+}

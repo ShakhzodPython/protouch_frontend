@@ -1,0 +1,192 @@
+.order_layout {
+  margin-top: 20px;
+
+  &_title {
+    font-family: var(--font-golos);
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--text-color);
+  }
+
+  &_content {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    &_item {
+      display: flex;
+      justify-content: stretch;
+      align-items: stretch;
+      gap: 90px;
+      width: 1263px;
+      height: 271px;
+      padding: 30px 0 30px 70px;
+      border-radius: 20px;
+      border: 2px solid var(--primary-color);
+
+      &_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 100%;
+          height: 178px;
+        }
+      }
+
+      &_heading {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &_title {
+          font-family: var(--font-golos);
+          font-weight: 500;
+          font-size: 24px;
+          color: var(--text-color);
+        }
+
+        &_price {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          &_text {
+            font-family: var(--font-golos);
+            font-weight: 400;
+            font-size: 16px;
+            color: #9b9b9b;
+          }
+
+          &_number {
+            font-family: var(--font-golos);
+            font-weight: 500;
+            font-size: 22px;
+            color: var(--text-color);
+          }
+        }
+
+        &_quantity {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+
+          &_text {
+            font-family: var(--font-golos);
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--text-color);
+          }
+
+          &_counter {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 150px;
+            height: 44px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 20px;
+            background: #f1f1f1;
+
+            button {
+              cursor: pointer;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border: none;
+              background: transparent;
+              transition: transform 0.3s ease;
+
+              &:hover {
+                transform: scale(1.1);
+              }
+
+              svg {
+                color: var(--text-color);
+              }
+            }
+
+            span {
+              font-family: var(--font-golos);
+              font-weight: 400;
+              font-size: 18px;
+              color: #222;
+            }
+          }
+        }
+      }
+
+      &_order_type {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 237px;
+
+        button {
+          cursor: pointer;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &_delivery {
+          max-width: 237px;
+          height: 50px;
+          padding: 15px;
+          border: none;
+          border-radius: 20px;
+          background: #fbfbfb;
+
+          &_active {
+            background: var(--primary-color);
+          }
+
+          &_text {
+            font-family: var(--font-golos);
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--text-color);
+
+            &_active {
+              color: #fff;
+            }
+          }
+        }
+
+        &_pickup {
+          border-radius: 20px;
+          padding: 10px 20px;
+          width: 237px;
+          height: 50px;
+          border: none;
+          background: #fbfbfb;
+
+          &_active {
+            background: var(--primary-color);
+          }
+
+          &_text {
+            font-family: var(--font-golos);
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--text-color);
+
+            &_active {
+              color: #fff;
+            }
+          }
+        }
+
+        p {
+          font-family: var(--font-golos);
+          font-weight: 400;
+          font-size: 16px;
+          color: #6f6f6f;
+        }
+      }
+    }
+  }
+}
