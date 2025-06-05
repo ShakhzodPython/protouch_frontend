@@ -11,6 +11,10 @@
     width: 100%;
     margin: 0 auto;
 
+    @media (max-width: 1440px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     &_sidebar_open {
       grid-template-columns: repeat(3, 3fr);
       justify-content: center;

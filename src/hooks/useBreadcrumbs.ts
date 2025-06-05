@@ -18,17 +18,20 @@ export function useBreadcrumbs() {
       (category) => category.slug === segment
     );
 
+    const translationKey = segment.replace(/-/g, '_');
+
     const name = matchedCategory
       ? matchedCategory.title
-      : t(`breadcrumbs.${breadcrumbKeys[segment] || segment}`, segment).replace(
-          /^./,
-          (breadcrumb) => breadcrumb.toUpperCase()
-        );
+      : t(
+          `breadcrumbs.${breadcrumbKeys[translationKey] || translationKey}`,
+          segment
+        ).replace(/^./, (breadcrumb) => breadcrumb.toUpperCase());
 
     return {
       name,
       url,
     };
   });
+
   return [{ name: t('main'), url: '/' }, ...breadcrumbs];
 }

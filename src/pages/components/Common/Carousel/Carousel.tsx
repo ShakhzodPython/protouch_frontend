@@ -54,17 +54,22 @@ export function Carousel() {
                   >
                     {carousel.text}
                   </h3>
-                  <button
-                    className={styles.carousel_swiper_slide_layout_info_button}
-                  >
-                    <span
-                      style={{
-                        color: `${carousel.carousel_color.percentage_color}`,
-                      }}
-                    >
-                      {carousel.percentage}%
-                    </span>
-                  </button>
+                  <div className={styles.carousel_swiper_slide_layout_info_buttons}>
+                  
+                      <button
+                        className={
+                          styles.carousel_swiper_slide_layout_info_button
+                        }
+                      >
+                        <span
+                          style={{
+                            color: `${carousel.carousel_color.percentage_color}`,
+                          }}
+                        >
+                          {carousel.sub_text}
+                        </span>
+                      </button>
+                  </div>
                 </div>
 
                 <div className={styles.carousel_swiper_slide_layout_sell}>

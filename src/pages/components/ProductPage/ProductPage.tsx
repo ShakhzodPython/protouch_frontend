@@ -34,10 +34,57 @@ export function ProductPage() {
   const totalPages = Math.ceil((products?.count ?? 0) / 12);
 
   const toggleSlug = (slug: string) => {
-    setSelectedSlug((prev) =>
-      prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]
-    );
+    setSelectedSlug((prev) => {
+      let updated = [...prev];
 
+      const parent = categories?.find((cat) =>
+        cat.children?.some((child) => child.slug === slug)
+      );
+
+      if (parent) {
+        // Это подкатегория
+        const isSelected = updated.includes(slug);
+
+        if (isSelected) {
+          updated = updated.filter((s) => s !== slug);
+
+          // Если после удаления это была последняя подкатегория, вернуть родителя
+          const otherSelectedChildren = parent.children.filter((child) =>
+            updated.includes(child.slug)
+          );
+
+          if (otherSelectedChildren.length === 0) {
+            updated.push(parent.slug);
+          }
+        } else {
+          // Выбираем подкатегорию
+          updated.push(slug);
+
+          // Удаляем родителя временно
+          updated = updated.filter((s) => s !== parent.slug);
+        }
+      } else {
+        // Это родитель
+        const currentParent = categories?.find((cat) => cat.slug === slug);
+
+        if (currentParent?.children) {
+          // Удаляем все дочерние категории при выборе родителя
+          updated = updated.filter(
+            (s) => !currentParent.children.some((child) => child.slug === s)
+          );
+        }
+
+        if (updated.includes(slug)) {
+          updated = updated.filter((s) => s !== slug);
+        } else {
+          updated.push(slug);
+        }
+      }
+
+      return updated;
+    });
+
+    // Обновим отображение брендов
     setSelectedChildSlug((prev) =>
       prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]
     );
@@ -97,14 +144,18 @@ export function ProductPage() {
                               className={`${
                                 styles.page_content_sidebar_aside_list_link_checkbox
                               } ${
-                                selectedSlug.includes(category.slug)
+                                selectedSlug.includes(category.slug) ||
+                                category.children.some((child) =>
+                                  selectedSlug.includes(child.slug)
+                                )
                                   ? styles.page_content_sidebar_aside_list_link_checkbox_checked
                                   : ''
                               }`}
                             >
-                              {selectedSlug.includes(category.slug) && (
-                                <img src={checkIcon} alt='check' />
-                              )}
+                              {(selectedSlug.includes(category.slug) ||
+                                category.children.some((child) =>
+                                  selectedSlug.includes(child.slug)
+                                )) && <img src={checkIcon} alt='check' />}
                             </div>
                             <span>{category.title}</span>
                           </li>
@@ -210,7 +261,7 @@ export function ProductPage() {
           </div>
         </div>
         {/* Pagination */}
-        {products?.results.length && products.results.length > 1 ? (
+        {products?.results.length && products.results.length >= 1 ? (
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}

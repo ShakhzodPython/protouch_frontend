@@ -6,7 +6,8 @@
     "create": "yaratish",
     "favorites": "sevimlilar",
     "profile": "profil",
-    "data": "ma'lumotlar"
+    "data": "ma'lumotlar",
+    "about_us": "biz haqimizda"
   },
   "order": {
     "main": "Sizning buyurtmangiz",
@@ -61,6 +62,29 @@
     "termConditions": "Siz ushbu qoidalar va shartlarga rozi bo'lishingiz kerak",
     "emptyField": "Bu maydon bo'sh bo'lishi mumkin emas"
   },
+  "about_us": {
+    "titleText": "O'zbekistonda yetakchi tizim integratori va raqamli yechimlar yetkazib beruvchi",
+    "suggestionText": "Biz barcha turdagi uskunalar va xizmatlarni taqdim etamiz, jumladan",
+    "suggestionInteractivePanels": "Interaktiv panellar, sensorli kiosklar va o'z-o'ziga xizmat ko'rsatish terminallari",
+    "suggestionConference": "Videokonferentsaloqa, multimedia va ovozli zal tizimlari",
+    "suggestionLedDisplay": "LED ekranlar, raqamli belgilar va ma'lumot taxtalari",
+    "suggestionServer": "Server echimlari va mahalliy tarmoqlarni qurish",
+    "suggestionIP": "IP-telefoniya, ichki va dispetcherlik aloqasi",
+    "suggestionCentre": "Vaziyat markazlari, dispetcherlik va monitoring komplekslari",
+    "suggestionOP": "Mijozning vazifalari uchun dasturiy ta'minot (buxgalteriya hisobi, nazorat, hisobot)",
+    "suggestionQueue": "Davlat idoralari, banklar va transport markazlari uchun elektron navbat tizimlari",
+    "suggestionPlace": "Aeroportlar, temir yo'l stantsiyalari, savdo markazlari va ta'lim muassasalari uchun kompleks echimlar",
+    "adviceText": "Biz nafaqat uskunani yetkazib beramiz-biz dizayndan tortib o'rnatishgacha, sozlashgacha bo'lgan keng qamrovli kalit echimlarni yaratamiz va xodimlarni o'qitish, barcha loyihalar texnik qo'llab-quvvatlash, kafolat va kafolatdan keyingi xizmat bilan birga keladi",
+    "adviceTextPart": "va xodimlarni o'qitish, barcha loyihalar texnik qo'llab-quvvatlash, kafolat va kafolatdan keyingi xizmat bilan birga keladi",
+    "advantageText": "Bizning afzalliklarimiz",
+    "successProjects": "O'zbekiston bo'ylab 300 dan ortiq muvaffaqiyatli amalga oshirilgan loyihalar",
+    "governmentText": "Davlat tenderlari va to'g'ridan-to'g'ri xaridlarda ishtirok etish tajribasi",
+    "deliveryText": "Ishonchli ishlab chiqaruvchilardan to'g'ridan — to'g'ri etkazib berish-bozor narxlaridan past narxlarda",
+    "teamText": "Professional muhandislar, dizaynerlar va mutaxassislar jamoasi",
+    "dealText": "Har bir loyihaga individual yondashuv",
+    "successEndText": "Biz ishonchlilik, halollik va murakkab narsalarni amalga oshirish qobiliyati uchun tanlanganmiz qisqa vaqt ichida loyihalar",
+    "successEndTextPart": "natija uchun ishlaydigan texnologiyalar..."
+  },
   "main": "Bosh sahifa",
   "language": "Uzbek",
   "products": "Mahsulotlar",
@@ -103,5 +127,7 @@
   "loginSuccess": "Siz hisob qaydnomasiga muvaffaqiyatli kirdingiz!",
   "orderSuccess": "Siz buyurtmani muvaffaqiyatli yaratdingiz!",
   "logoutSuccess": "Siz hisobdan muvaffaqiyatli chiqdingiz!",
-  "addProducts": "Mahsulotlar qo'shish"
+  "addProducts": "Mahsulotlar qo'shish",
+  "notFoundText": "Siz izlagan narsani topa olmadik",
+  "notFoundTextPart": "Afsuski, siz izlayotgan sahifa topilmadi. U vaqtincha mavjud bo'lmasligi, ko'chirilishi yoki mavjud bo'lmasligi mumkin"
 }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Menu } from 'lucide-react';
 
 import styles from './Header.module.scss';
 import headerLogo from '../../assets/icons/logo.png';
@@ -8,9 +9,9 @@ import { NavLinks } from './Nav/NavLinks';
 import { NavIcons } from './Nav/NavIcons';
 import { Cart } from '../Cart/Cart';
 import { Search } from '../Search/Search';
+import { Menu as BurgerMenu } from './Menu/Menu';
 
 export function Header() {
-
   const location = useLocation();
 
   const [shadow, setShadow] = useState<boolean>(false);
@@ -27,6 +28,8 @@ export function Header() {
     return localStorage.getItem('isSearchOpen') === 'true';
   });
 
+  const [burgerMenu, setBurgerMenu] = useState<boolean>(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setShadow(window.scrollY > 50);
@@ -40,6 +43,7 @@ export function Header() {
   useEffect(() => {
     setIsCartOpen(false);
     setIsSearchOpen(false);
+    setBurgerMenu(false);
     localStorage.removeItem('isCartOpen');
     localStorage.removeItem('isSearchOpen');
   }, [location.pathname]);
@@ -50,6 +54,10 @@ export function Header() {
 
   const toggleSearch = (): void => {
     setIsSearchOpen((prev) => !prev);
+  };
+
+  const toggleBurgerMenu = () => {
+    setBurgerMenu((prev) => !prev);
   };
 
   return (
@@ -84,18 +92,51 @@ export function Header() {
                 <img src={headerLogo} alt='header-logo' />
               </Link>
             </div>
-                <NavLinks
-                  activeLink={activeLink}
-                  setActiveLink={setActiveLink}
-                />
-                <NavIcons
-                  isCartOpen={isCartOpen}
-                  isSearchOpen={isSearchOpen}
-                  toggleCart={toggleCart}
-                  toggleSearch={toggleSearch}
-                  setActiveLink={setActiveLink}
-                />
+            {/* Desktop navbar */}
+            <div className={styles.header_nav_desktop_menu}>
+              <NavLinks activeLink={activeLink} setActiveLink={setActiveLink} />
+              <NavIcons
+                isCartOpen={isCartOpen}
+                isSearchOpen={isSearchOpen}
+                toggleCart={toggleCart}
+                toggleSearch={toggleSearch}
+                setActiveLink={setActiveLink}
+              />
+            </div>
+
+            {/* Mobile navbar */}
+            <div className={styles.header_nav_burger_menu}>
+              <NavIcons
+                isCartOpen={isCartOpen}
+                isSearchOpen={isSearchOpen}
+                toggleCart={toggleCart}
+                toggleSearch={toggleSearch}
+                setActiveLink={setActiveLink}
+              />
+              <button
+                onClick={toggleBurgerMenu}
+                className={styles.header_nav_burger_menu_button}
+              >
+                {!burgerMenu && <Menu color='#222' size={25} />}
+              </button>
+            </div>
           </nav>
+          {/* Mobile navbar list links */}
+          <AnimatePresence>
+            {burgerMenu && (
+              <motion.div
+                key='burger-menu'
+                initial={{ x: '100%' }}
+                animate={{ x: 0 }}
+                exit={{ x: '100%' }}
+                transition={{ duration: 0.3 }}
+                className={styles.header_nav_burger_menu_layout}
+              >
+                <BurgerMenu toggleBurgerMenu={toggleBurgerMenu} />
+              </motion.div>
+            )}
+          </AnimatePresence>
+
           <AnimatePresence>{isCartOpen && <Cart />}</AnimatePresence>
           <AnimatePresence>{isSearchOpen && <Search />}</AnimatePresence>
         </div>

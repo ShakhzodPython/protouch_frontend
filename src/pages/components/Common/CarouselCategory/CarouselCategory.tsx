@@ -10,13 +10,15 @@ import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export function CarouselCategory() {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const { data: carouselCategories } = useCarouselCategory('true');
 
   return (
     <div className={styles.carousel_category_swiper}>
       <div className={styles.carousel_category_swiper_container}>
-        <h1 className={styles.carousel_category_swiper_title}>{t('categories')}</h1>
+        <h1 className={styles.carousel_category_swiper_title}>
+          {t('categories')}
+        </h1>
         <Swiper
           allowTouchMove={true}
           modules={[Autoplay]}
@@ -66,13 +68,13 @@ export function CarouselCategory() {
             <SwiperSlide key={carouselCategory.id}>
               <div className={styles.carousel_category_swiper_slides}>
                 <div className={styles.carousel_category_swiper_slides_slide}>
-                  <h3
-                    className={
-                      styles.carousel_category_swiper_slides_slide_title
-                    }
-                  >
-                    {carouselCategory.title}
-                  </h3>
+                    <h3
+                      className={
+                        styles.carousel_category_swiper_slides_slide_title
+                      }
+                    >
+                      {carouselCategory.title}
+                    </h3>
                   {carouselCategory.image ? (
                     <img
                       className={

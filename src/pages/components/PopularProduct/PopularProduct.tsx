@@ -73,8 +73,9 @@ export function PopularProduct() {
             </ul>
           </div>
         ))}
+
+        <Product products={products?.results || []} />
       </div>
-      <Product products={products?.results || []} />
     </div>
   );
 }

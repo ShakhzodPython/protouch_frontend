@@ -17,6 +17,9 @@
     align-items: stretch;
     gap: 50px;
 
+    @media (max-width: 1440px) {
+    }
+
     &_layout {
       max-width: 335px;
       width: 100%;
@@ -153,5 +156,10 @@
     max-width: 1520px;
     width: 100%;
     margin: 0 auto;
+
+
+    @media (max-width: 1440px) {
+      max-width: 1320px;
+    }
   }
 }

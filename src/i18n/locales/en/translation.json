@@ -6,7 +6,8 @@
     "create": "create",
     "favorites": "favorites",
     "profile": "profile",
-    "data": "data"
+    "data": "data",
+    "about_us": "about us"
   },
   "order": {
     "main": "Your order",
@@ -61,6 +62,30 @@
     "termConditions": "You must agree to the terms and conditions",
     "emptyField": "This field cannot be empty"
   },
+  "about_us": {
+    "titleText": "a leading system integrator and digital solutions provider in Uzbekistan",
+    "suggestionText": "We provide a full range of equipment and services, including",
+    "suggestionInteractivePanels": "Interactive panels, touch kiosks and self-service terminals",
+    "suggestionConference": "Videoconferencing, multimedia and sound-recording systems for halls",
+    "suggestionLedDisplay": "LED screens, digital signage and information boards",
+    "suggestionServer": "Server solutions and building local networks",
+    "suggestionIP": "IP telephony, internal and dispatch communication",
+    "suggestionCentre": "Situational centers, dispatch and monitoring complexes",
+    "suggestionOP": "Software for the customer's tasks (accounting, control, reporting)",
+    "suggestionQueue": "Electronic queue systems for government agencies, banks and transport hubs",
+    "suggestionPlace": "Comprehensive solutions for airports, train stations, shopping malls and educational institutions",
+    "adviceText": "We do not just supply equipment, we create turnkey complex solutions from design to installation, configuration and staff training, all projects are accompanied by technical support, warranty and post-warranty service",
+    "adviceTextPart": "and staff training, all projects are accompanied by technical support, warranty and post-warranty service",
+    "advantageText": "Our advantages",
+    "successProjects": "More than 300 successfully implemented projects throughout Uzbekistan",
+    "governmentText": "Experience of participation in public tenders and direct procurement",
+    "deliveryText": "Direct deliveries from trusted manufacturers at below—market prices",
+    "teamText": "A team of professional engineers, designers and specialists",
+    "dealText": "Individual approach to each project",
+    "successEndText": "We are chosen for our reliability, honesty and ability to implement complex projects. projects in the shortest possible time",
+    "successEndTextPart": "technologies that work for results.."
+    
+  },
   "main": "Home",
   "language": "English",
   "products": "Products",
@@ -103,5 +128,7 @@
   "loginSuccess": "You have successfully logged in to your account!",
   "orderSuccess": "You have successfully created an order!",
   "logoutSuccess": "You have successfully logged out of your account!",
-  "addProducts": "Add products"
+  "addProducts": "Add products",
+  "notFoundText": "We couldn't find what you were looking for",
+  "notFoundTextPart": "Unfortunately, the page you were looking for could not be found. It may be temporarily unavailable, moved, or no longer exist"
 }

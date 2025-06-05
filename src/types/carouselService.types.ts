@@ -13,7 +13,7 @@ type CarouselColorType = {
 export type CarouselType = {
   id: string;
   text: string;
-  percentage: number;
+  sub_text: string;
   url: string;
   carousel_color: CarouselColorType;
   image: ImageType;

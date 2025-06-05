@@ -16,6 +16,8 @@ import { startTokenRefresh, stopTokenRefresh } from './utils/tokenManger';
 import { Favorite } from './pages/components/Favorite/Favorite';
 import { Profile } from './pages/components/Profile/Profile';
 import { Footer } from './components/Footer/Footer';
+import { About } from './pages/components/About/About';
+import { NotFound } from './components/NotFound/NotFound';
 
 export default function App() {
   // Trigger, if the user is already logged in, and start refresh token
@@ -50,10 +52,13 @@ export default function App() {
           <Route path='/favorites' element={<Favorite />} />
           <Route path='/profile/data' element={<Profile />} />
           <Route path='/profile/orders' element={<Profile />} />
+          <Route path='/about-us' element={<About />} />
+          <Route path="*" element={<NotFound />} />
+
         </Routes>
         <ToastContainer />
       </main>
-    <Footer />
+      <Footer />
     </>
   );
 }

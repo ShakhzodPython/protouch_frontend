@@ -10,7 +10,11 @@ export function NavLinks({ activeLink, setActiveLink }: NavLinksProps) {
   const location = useLocation();
 
   const links: Array<LinksType> = useMemo(
-    () => [{ name: t('products'), url: '/products' }],
+    () => [
+      { name: t('products'), url: '/products' },
+      { name: t('footer.careers'), url: '/careers' },
+      { name: t('footer.aboutUs'), url: '/about-us' }
+    ],
     [t]
   );
 
